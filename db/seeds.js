@@ -36,15 +36,6 @@ User.remove({}).then(() => {
         coverImgUrl: 'http://img.moviepostershop.com/bottle-rocket-movie-poster-1996-1020196344.jpg'
     });
 
-    const videodrome = new Movie({
-        title: 'Videodrome',
-        director: 'David Cronenberg',
-        writer: 'David Cronenberg',
-        releaseYear: 1983,
-        synopsis: 'When he acquires a different kind of show for his station, a sleazy cable-TV programmer begins to see his life and the future of media spin out of control in a terrifying new reality.',
-        coverImgUrl: 'https://www.movieposter.com/posters/archive/main/201/MPW-100686'
-    });
-
     const homeAlone = new Movie({
         title: 'Home Alone',
         director: 'Chris Columbus',
