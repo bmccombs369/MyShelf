@@ -12,7 +12,13 @@ require('dotenv').config();
 
 // database connection
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI)
+.then(() => {
+  console.log('connected to mongoDB')
+})
+.catch((err) => {
+  console.log('ERROR', err)
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

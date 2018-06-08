@@ -4,9 +4,7 @@ const Catalog = require('../models/Catalog');
 const Movie = require('../models/Movie');
 require('dotenv').config();
 
-mongoose.connect(process.env.MONGODB_URI, {
-    useMongoClient: true
-});
+mongoose.connect(process.env.MONGODB_URI);
 
 User.remove({}).then(() => {
     const videodrome = new Movie({
