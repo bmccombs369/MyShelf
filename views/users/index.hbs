@@ -3,7 +3,9 @@
 <ul>
     {{#each users}}
     <li>
-        <p>{{username}}</p>
+        <a href="/users/{{_id}}">
+            <p>{{username}}</p>
+        </a>
         <img src="{{photoUrl}}">
         <p>Favorite Movie Quote: {{favoriteMovieQuote}}</p>
     </li>

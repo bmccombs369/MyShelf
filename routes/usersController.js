@@ -27,9 +27,9 @@ router.post('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
-    .then((users) => {
+    .then((user) => {
       res.render('users/show', {
-        users: users
+        user: user
       });
     });
 });
