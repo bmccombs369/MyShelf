@@ -1,1 +1,13 @@
-{{#each catalogs}}
+<h1>{{users.username}}'s Catalogs</h1>
+
+<ul>
+    {{#each catalogs}}
+    <li>
+        {{!-- <a href="/users/{{_id}}/catalogs"> --}}
+            <p>{{name}}</p>
+        {{!-- </a> --}}
+        <img src="{{photoUrl}}">
+        <p>Favorite Movie Quote: {{favoriteMovieQuote}}</p>
+    </li>
+    {{/each}}
+</ul>
