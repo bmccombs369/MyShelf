@@ -12,14 +12,14 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/new', (req, res) => {
-    res.render('catalogs/new', {
-        userId: req.params.userId
-    })
-})
-router.post('/', (req, res) => {
+// router.get('/new', (req, res) => {
+//     res.render('catalogs/new', {
+//         userId: req.params.userId
+//     })
+// })
+// router.post('/', (req, res) => {
 
-})
+// })
 
 
 module.exports = router;
