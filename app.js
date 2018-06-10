@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersController);
 // \/This breaks server\/
-// app.use('/users/:userId/catalogs', catalogsController);
+app.use('/users/:usersId/catalogs', catalogsController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
