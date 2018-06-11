@@ -3,7 +3,7 @@ const User = require('../models/User');
 const Catalog = require('../models/Catalog');
 
 router.get('/', (req, res) => {
-    User.findById(req.params.id)
+    User.findById(req.params.usersId)
         .then((user) => {
             const catalogs = user.catalogs
             res.render('catalogs/index', {
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 router.get('/new', (req, res) => {
     res.render('catalogs/new', {
-        userId: req.params.id
+        userId: req.params.usersId
     })
 })
 router.post('/', (req, res) => {
@@ -24,12 +24,12 @@ router.post('/', (req, res) => {
             user.catalogs.push(catalog);
             return user.save()
                 .then(() => {
-                    res.redirect(`/users/${req.params.id}/catalogs`);
+                    res.redirect(`/users/${req.params.usersId}/catalogs`);
                 })
         })
 })
 
-router.delete('/:id', (req,res) => {
+router.delete('/:catalogsid', (req,res) => {
     
 })
 

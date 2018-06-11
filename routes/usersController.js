@@ -25,8 +25,8 @@ router.post('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
-  User.findById(req.params.id)
+router.get('/:usersId', (req, res) => {
+  User.findById(req.params.usersId)
     .then((user) => {
       res.render('users/show', {
         user: user
@@ -34,23 +34,23 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.get('/:id/edit', (req, res) => {
-  User.findById(req.params.id)
+router.get('/:usersId/edit', (req, res) => {
+  User.findById(req.params.usersId)
     .then((users) => {
       res.render('users/edit', {
         users: users
       });
     });
 });
-router.patch('/:id', (req, res) => {
-  User.findByIdAndUpdate(req.params.id, req.body, {new: true})
+router.patch('/:usersId', (req, res) => {
+  User.findByIdAndUpdate(req.params.usersId, req.body, {new: true})
   .then(() => {
-    res.redirect(`/users/${req.params.id}`);
+    res.redirect(`/users/${req.params.usersId}`);
   });
 });
 
-router.delete('/:id', (req, res) => {
-  User.findByIdAndRemove(req.params.id)
+router.delete('/:usersId', (req, res) => {
+  User.findByIdAndRemove(req.params.usersId)
   .then(() => {
     console.log('Successfully Deleted');
     res.redirect('/users');
