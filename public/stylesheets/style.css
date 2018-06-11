@@ -12,29 +12,6 @@ img {
   height: 205px;
 }
 
-footer {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-header {
-  position: fixed;
-  margin-right: 0;
-  top: 0;
-  margin-left: 0;
-  margin-bottom: 5px;
-}
-
 .logo {
   height: 62px;
-}
-
-.moviePosters {
-      background-image: url("https://pre00.deviantart.net/6cd1/th/pre/f/2011/035/6/4/imdb_top_250_movie_poster_by_saxon1964-d38rnod.jpg");
-      height: 100%; 
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
 }
