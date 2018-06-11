@@ -3,16 +3,15 @@
 <ul>
     <div class="row">
         {{#each users}}
-        <div class="col s12 m7">
-            <h2 class="header">{{username}}</h2>
+        <div class="col s12 m4">
             <div class="card horizontal">
                 <div class="card-image">
                     <img src={{photoUrl}}>
                 </div>
                 <div class="card-stacked">
-                    {{!-- <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.</p>
-                    </div> --}}
+                    <div class="card-content">
+                        <h6>{{username}}</h6>
+                    </div>
                     <div class="card-action">
                         <a href="/users/{{_id}}">View User</a>
                     </div>
