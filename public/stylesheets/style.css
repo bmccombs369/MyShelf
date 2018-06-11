@@ -12,6 +12,14 @@ img {
   height: 205px;
 }
 
+header {
+  position: fixed;
+}
+
+footer {
+  position: fixed;
+}
+
 .logo {
   height: 62px;
 }
