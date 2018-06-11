@@ -3,7 +3,7 @@ const User = require('../models/User');
 const Catalog = require('../models/Catalog');
 
 router.get('/', (req, res) => {
-    User.findById(req.params.userId)
+    User.findById(req.params.id)
         .then((user) => {
             const catalogs = user.catalogs
             res.render('catalogs/index', {
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 
 router.get('/new', (req, res) => {
     res.render('catalogs/new', {
-        userId: req.params.userId
+        userId: req.params.id
     })
 })
 router.post('/', (req, res) => {
