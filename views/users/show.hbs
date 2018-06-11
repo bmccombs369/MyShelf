@@ -11,6 +11,7 @@
         <a href="/users/{{user._id}}/edit">Update User</a>
     </div>
     <div class="btn">
-        <a href="/users/{{user._id}}?_method=DELETE">Delete User</a>
+        <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+        Delete User
     </div>
 </ul>
