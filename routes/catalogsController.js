@@ -30,12 +30,21 @@ router.post('/', (req, res) => {
         })
 })
 
-router.delete('/:catalogsId', (req,res) => {
+router.get('/:catalogsId', (req, res) => {
+    Catalog.findById(req.params.catalogsId)
+        .then((catalog) => {
+            res.render('catalogs/show', {
+                catalog: catalog
+            });
+        });
+});
+
+router.delete('/:catalogsId', (req, res) => {
     Catalog.findByIdAndRemove(req.params.catalogsId)
-    .then(() => {
-        console.log('Successfully Deleted');
-        res.redirect(`/users/${req.params.usersId}/catalogs`);
-      });
+        .then(() => {
+            console.log('Successfully Deleted');
+            res.redirect(`/users/${req.params.usersId}/catalogs`);
+        });
 })
 
 
