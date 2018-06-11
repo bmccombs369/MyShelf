@@ -17,13 +17,14 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  top: 5px;
 }
 
 header {
-  position: aboslute;
-  right: 0;
+  position: fixed;
+  margin-right: 0;
   top: 0;
-  left: 0;
+  margin-left: 0;
   bottom: 5px;
 }
 
