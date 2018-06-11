@@ -7,7 +7,11 @@
         <p>{{catalog.name}}</p>
     </li>
     {{/each}}
-
-    <form action="/users/{{user._id}}?_method=DELETE" method="POST">
-        <button type="submit">Delete User</button>
+    <div class="btn">
+        <a href="/users/{{user._id}}/edit">Update User</a>
+    </div>
+    <div>
+        <form action="/users/{{user._id}}?_method=DELETE" method="POST">
+            <button type="submit">Delete User</button>
+    </div>
 </ul>
