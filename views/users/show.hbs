@@ -2,11 +2,11 @@
 <img src="{{user.photoUrl}}">
 <p>Favorite Movie Quote: {{user.favoriteMovieQuote}}</p>
 <ul>
-    {{#each user.catalog}}
+    {{!-- {{#each user.catalog}}
     <li>
         <p>{{catalog.name}}</p>
     </li>
-    {{/each}}
+    {{/each}} --}}
     <div class="row">
         <div class="btn col s2">
             <a class="editButton" href="/users/{{user._id}}/edit">
@@ -16,6 +16,10 @@
             <form action="/users/{{user._id}}?_method=DELETE" method="POST" />
             <button class="btn" type="submit">
                 <i class="material-icons left">delete_forever</i>Delete</button>
+        </div>
+        <div class="btn col s2">
+            <a class="editButton" href="/users/{{user._id}}/catalogs">
+                <i class="material-icons left">keyboard_return</i>Catalogs</a>
         </div>
     </div>
 </ul>
