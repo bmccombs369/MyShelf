@@ -42,7 +42,7 @@ router.get('/:usersId/edit', (req, res) => {
       });
     });
 });
-router.patch('/:usersId', (req, res) => {
+router.put('/:usersId', (req, res) => {
   User.findByIdAndUpdate(req.params.usersId, req.body, {new: true})
   .then(() => {
     res.redirect(`/users/${req.params.usersId}`);
