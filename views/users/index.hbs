@@ -2,12 +2,14 @@
 
 <ul>
     {{#each users}}
-    <li>
+    <div class="row">
+    <li class="col s12 m6">
         <a href="/users/{{_id}}">
             <p>{{username}}</p>
         </a>
         <img src="{{photoUrl}}">
         <p>Favorite Movie Quote: {{favoriteMovieQuote}}</p>
     </li>
+    </div>
     {{/each}}
 </ul>
