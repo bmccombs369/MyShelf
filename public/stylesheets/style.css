@@ -12,6 +12,10 @@ img {
   height: 205px;
 }
 
+body {
+  margin: 0;
+}
+
 header {
   position: fixed;
 }
