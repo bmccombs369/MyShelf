@@ -3,19 +3,19 @@
 <form action="/users/{{user._id}}?_method=PUT" method="POST">
   <div>
     <label for="username">Username</label>
-    <input type="text" name="username" value={{user.username}} />
+    <input type="text" name="username" value='{{user.username}}' />
   </div>
   <div>
     <label for="email">E-mail</label>
-    <input type="text" name="email" value={{user.email}} />
+    <input type="text" name="email" value='{{user.email}}' />
   </div>
   <div>
     <label for="photoUrl">User Photo URL</label>
-    <input type="text" name="photoUrl" value={{user.photoUrl}} />
+    <input type="text" name="photoUrl" value='{{user.photoUrl}}' />
   </div>
   <div>
     <label for="favoriteMovieQuote">Favorite Movie Quote</label>
-    <input type="text" name="favoriteMovieQuote" value={{user.favoriteMovieQuote}} />
+    <input type="text" name="favoriteMovieQuote" value='{{user.favoriteMovieQuote}}' />
   </div>
   <button class="btn" type="submit">Save User</button>
 </form>
