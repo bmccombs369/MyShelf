@@ -7,4 +7,7 @@
         <p>{{catalog.name}}</p>
     </li>
     {{/each}}
+
+    <form action="/users/{{homeworkAssignment._id}}?_method=DELETE" method="POST">
+        <button type="submit">Delete User</button>
 </ul>
