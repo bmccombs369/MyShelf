@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
         .then((user) => {
             const catalogs = user.catalogs
             res.render('catalogs/index', {
+                user: user,
                 catalogs: catalogs
             });
         });
