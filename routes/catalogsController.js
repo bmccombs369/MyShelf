@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
             user.catalogs.push(catalog);
             return user.save()
                 .then(() => {
-                    res.redirect(`/users/${req.params.userId}/catalogs`);
+                    res.redirect(`/users/${req.params.id}/catalogs`);
                 })
         })
 })
