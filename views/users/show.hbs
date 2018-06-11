@@ -8,10 +8,10 @@
     </li>
     {{/each}}
     <div class="btn">
-        <a href="/users/{{user._id}}/edit">Update User</a>
+        <a href="/users/{{user._id}}/edit"><i class="material-icons left">edit</i>Update User</a>
     </div>
-    <div class="btn">
+    <div>
         <form action="/users/{{user._id}}?_method=DELETE" method="POST" />
-        <button class="btn" type="submit">Delete User</button>
+        <button class="btn" type="submit"><i class="material-icons left">delete_forever</i>Delete User</button>
     </div>
 </ul>
