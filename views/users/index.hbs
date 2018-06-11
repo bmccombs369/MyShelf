@@ -3,12 +3,22 @@
 <ul>
     <div class="row">
         {{#each users}}
-        <li  class="col s4">
-            <a href="/users/{{_id}}">
-                <p>{{username}}</p>
-            </a>
-            <img src="{{photoUrl}}">
-        </li>
+        <div class="col s12 m7">
+            <h2 class="header">{{username}}</h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src={{photoUrl}}>
+                </div>
+                <div class="card-stacked">
+                    {{!-- <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    </div> --}}
+                    <div class="card-action">
+                        <a href="/users/{{_id}}">View User</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {{/each}}
     </div>
 </ul>
@@ -19,3 +29,13 @@
     </a>
 
 </div>
+
+
+
+{{!--
+<li class="col s4">
+    <a href="/users/{{_id}}">
+        <p>{{username}}</p>
+    </a>
+    <img src="{{photoUrl}}">
+</li> --}}
