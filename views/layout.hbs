@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <title>MyShelf</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">
+          <img src="../public/images/shelfLogo.jpeg">MyShelf</a>
+      </div>
+    </nav>
+  </header>
+  <main>
     {{{body}}}
-  </body>
+  </main>
+  <footer>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2018 Copyright Text
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
+
 </html>
