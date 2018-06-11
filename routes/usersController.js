@@ -53,7 +53,7 @@ router.delete('/:id', (req, res) => {
   Homework.findByIdAndRemove(req.params.id)
   .then(() => {
     console.log('Successfully Deleted');
-    res.redirect('/homework');
+    res.redirect('/users');
   });
 });
 
