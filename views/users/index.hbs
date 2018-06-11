@@ -3,13 +3,15 @@
 <ul>
     {{#each users}}
     <div class="row">
-    <li class="col s12 m6">
-        <a href="/users/{{_id}}">
-            <p>{{username}}</p>
-        </a>
-        <img src="{{photoUrl}}">
-        <p>Favorite Movie Quote: {{favoriteMovieQuote}}</p>
-    </li>
+        <div class="col s12 m6">
+            <li>
+                <a href="/users/{{_id}}">
+                    <p>{{username}}</p>
+                </a>
+                <img src="{{photoUrl}}">
+                <p>Favorite Movie Quote: {{favoriteMovieQuote}}</p>
+            </li>
+        </div>
     </div>
     {{/each}}
 </ul>
