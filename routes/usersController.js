@@ -43,14 +43,14 @@ router.get('/:id/edit', (req, res) => {
     });
 });
 router.patch('/:id', (req, res) => {
-  Homework.findByIdAndUpdate(req.params.id, req.body, {new: true})
+  User.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(() => {
     res.redirect(`/users/${req.params.id}`);
   });
 });
 
 router.delete('/:id', (req, res) => {
-  Homework.findByIdAndRemove(req.params.id)
+  User.findByIdAndRemove(req.params.id)
   .then(() => {
     console.log('Successfully Deleted');
     res.redirect('/users');
