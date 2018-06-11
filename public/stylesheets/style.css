@@ -12,6 +12,13 @@ img {
   height: 205px;
 }
 
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
 .logo {
   height: 62px;
 }
