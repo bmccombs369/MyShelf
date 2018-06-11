@@ -1,0 +1,10 @@
+<ul>
+  {{#each movie}}
+  <li>
+    <p>{{movie.title}}</p>
+  </li>
+  {{/each}}
+</ul>
+<form action="/users/{{user._id}}?_method=DELETE" method="POST" />
+<button class="btn" type="submit">
+  <i class="material-icons left">delete_forever</i>Delete This Catalog</button>
