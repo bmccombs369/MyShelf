@@ -1,20 +1,10 @@
-{{!-- <ul>
+<div class="row">
   {{#each catalog.movies}}
-  <li>
-    <p>{{catalog.movies.title}}</p>
-  </li>
+  <div class="col s4 m2">
+    <img src={{this.coverImgUrl}}>
+  </div>
   {{/each}}
-</ul>
-<form action="/users/{{user._id}}/catalogs/{{catalog._id}}?_method=DELETE" method="POST" />
-<button class="btn" type="submit">
-  <i class="material-icons left">delete_forever</i>Delete This Catalog</button> --}}
-  <ul>
-  {{#each catalog.movies}}
-  <li>
-    <p>{{this.title}}</p>
-  </li>
-  {{/each}}
-</ul>
+</div>
 <form action="/users/{{user._id}}/catalogs/{{catalog._id}}?_method=DELETE" method="POST" />
 <button class="btn" type="submit">
   <i class="material-icons left">delete_forever</i>Delete This Catalog</button>
