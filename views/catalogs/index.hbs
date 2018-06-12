@@ -1,4 +1,10 @@
-<h1>{{user.username}}'s Catalogs</h1>
+<h1>{{user.username}}'s Catalogs
+    <div class="addCatalog">
+        <a href="/users/{{user._id}}/catalogs/new" class="btn-floating btn-large waves-effect waves-light red">
+            <i class="material-icons">add</i>
+        </a>
+    </div>
+</h1>
 
 <ul>
     {{#each catalogs}}
@@ -8,9 +14,3 @@
     </li>
     {{/each}}
 </ul>
-
-<div class="addCatalog">
-    <a href="/users/{{user._id}}/catalogs/new" class="btn-floating btn-large waves-effect waves-light red">
-        <i class="material-icons">add</i>
-    </a>
-</div>
