@@ -30,12 +30,28 @@ router.post('/', (req, res) => {
         });
 });
 
+// router.get('/:catalogsId', (req, res) => {
+//     Catalog.findById(req.params.catalogsId)
+//         .then((catalog) => {
+//             res.render('catalogs/show', {
+//                 catalog: catalog
+//             });
+//         });
+// });
+
 router.get('/:catalogsId', (req, res) => {
-    Catalog.findById(req.params.catalogsId)
-        .then((catalog) => {
+    const usersId = req.params.usersId;
+    const catalogsId = req.params.catalogsId;
+    User.findById(usersId)
+        .then((user) => {
+            const catalog = user.catalogs.id(catalogsId);
             res.render('catalogs/show', {
+                usersId: usersId,
                 catalog: catalog
             });
+        })
+        .catch((err) => {
+            console.log(err);
         });
 });
 
