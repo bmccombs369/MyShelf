@@ -19,6 +19,11 @@ img {
   height: 205px;
 }
 
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .editButton {
   color: #ffffff;
 }
