@@ -4,6 +4,10 @@ body {
 
 footer {
   margin-top: 10px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed
 }
 
 a {
