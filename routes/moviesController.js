@@ -6,10 +6,10 @@ const Movie = require('../models/Movie');
 router.get('/', (req, res) => {
   User.findById(req.params.usersId)
     .then(Catalog.findById(req.params.catalogsId))
-    .then((catalog) => {
-      const movies = catalog.movies
+    .then((user) => {
+      const movies = user.catalog.movies
       res.render('movies/index', {
-        catalog: catalog,
+        user: user,
         movies: movies
       })
     })
