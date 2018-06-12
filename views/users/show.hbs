@@ -25,21 +25,20 @@
     </div>
 </ul> --}}
 
-<div class="row">
-    <div class="col s12 m6">
-        <div class="card">
-            <div class="card-image">
-                <img src="{{user.photoUrl}}">
-                <span class="card-title">{{user.username}}</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                    <i class="material-icons">add</i>
-                </a>
-                <a class="btn-floating halfway-fab waves-effect waves-light red">
-                    <i class="material-icons">add</i>
-                </a>
-            </div>
+
+<div class="col s12 m7">
+    <h2 class="header">{{user.username}}</h2>
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="{{user.photoUrl}}">
+        </div>
+        <div class="card-stacked">
             <div class="card-content">
                 <p>{{user.favoriteMovieQuote}}</p>
+            </div>
+            <div class="card-action">
+            <a href="/users/{{user._id}}/catalogs">
+                <i class="material-icons right">keyboard_return</i>Catalogs</a>
             </div>
         </div>
     </div>

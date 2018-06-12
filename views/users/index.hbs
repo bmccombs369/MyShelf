@@ -1,39 +1,27 @@
 <h1>Users</h1>
 
-<ul>
-    <div class="row">
-        {{#each users}}
-        <div class="col s12 m4">
-            <div class="card horizontal">
-                <div class="card-image">
-                    <img src={{photoUrl}}>
+<div class="row">
+    {{#each users}}
+    <div class="col s12 m4">
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src={{photoUrl}}>
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h6>{{username}}</h6>
                 </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h6>{{username}}</h6>
-                    </div>
-                    <div class="card-action">
-                        <a href="/users/{{_id}}">View User</a>
-                    </div>
+                <div class="card-action">
+                    <a href="/users/{{_id}}">View User</a>
                 </div>
             </div>
         </div>
-        {{/each}}
     </div>
-</ul>
+    {{/each}}
+</div>
 
 <div class="addUser">
     <a href="users/new" class="btn-floating btn-large waves-effect waves-light red">
         <i class="material-icons">add</i>
     </a>
 </div>
-
-
-
-{{!--
-<li class="col s4">
-    <a href="/users/{{_id}}">
-        <p>{{username}}</p>
-    </a>
-    <img src="{{photoUrl}}">
-</li> --}}
