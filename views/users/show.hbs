@@ -42,14 +42,16 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="btn col s2">
-        <a class="editButton" href="/users/{{user._id}}/edit">
-            <i class="material-icons left">edit</i>Update</a>
+<ul>
+    <div class="row">
+        <div class="btn col s2">
+            <a class="editButton" href="/users/{{user._id}}/edit">
+                <i class="material-icons left">edit</i>Update</a>
+        </div>
+        <div class="col s2">
+            <form action="/users/{{user._id}}?_method=DELETE" method="POST" />
+            <button class="btn" type="submit">
+                <i class="material-icons left">delete_forever</i>Delete</button>
+        </div>
     </div>
-    <div class="col s2">
-        <form action="/users/{{user._id}}?_method=DELETE" method="POST" />
-        <button class="btn" type="submit">
-            <i class="material-icons left">delete_forever</i>Delete</button>
-    </div>
-</div>
+</ul>
