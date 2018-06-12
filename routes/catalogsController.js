@@ -22,13 +22,13 @@ router.post('/', (req, res) => {
     const newCatalog = new Catalog(req.body);
     User.findById(req.params.userId)
         .then((user) => {
-            user.catalogs.push(catalog);
+            user.catalogs.push(newCatalog);
             return user.save()
-                .then(() => {
-                    res.redirect(`/users/${req.params.usersId}/catalogs`);
-                })
         })
-})
+        .then(() => {
+            res.redirect(`/users/${req.params.usersId}/catalogs`);
+        });
+});
 
 router.get('/:catalogsId', (req, res) => {
     Catalog.findById(req.params.catalogsId)
