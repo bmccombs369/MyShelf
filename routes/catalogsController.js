@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     User.findById(req.params.usersId)
         .then((user) => {
             user.catalogs.push(newCatalog);
-            return user.save()
+            return user.save();
         })
         .then(() => {
             res.redirect(`/users/${req.params.usersId}/catalogs`);
