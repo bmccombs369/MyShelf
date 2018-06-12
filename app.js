@@ -6,7 +6,8 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const usersController = require('./routes/usersController');
-const catalogsController = require('./routes/catalogsController')
+const catalogsController = require('./routes/catalogsController');
+const moviesController = require('./routes/moviesController');
 
 const app = express();
 require('dotenv').config();
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersController);
 app.use('/users/:usersId/catalogs', catalogsController);
+app.use('/users/:usersId/catalogs/:catalogsId/movies', moviesController);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
