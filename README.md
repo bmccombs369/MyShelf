@@ -1,8 +1,8 @@
 # MyShelf
 ### [Heroku App](https://nameless-wave-26681.herokuapp.com/)
 ### [Trello Board](https://trello.com/b/NpuoTUy9/wdi-project-2-movie-catalog)
-### [ERD]()
-### [Wireframes]()
+### [ERD](https://imgur.com/a/u5WDSDk)
+### [Wireframes](https://imgur.com/a/D6tenRa)
 ### Technologies Used:
 ##### Javascript, Css, HTML, Node.js, Express, Handlebars, MongoDb & Mongoose
 ---
