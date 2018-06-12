@@ -74,7 +74,7 @@ User.remove({}).then(() => {
     const ben = new User({
         username: 'Ben',
         email: 'ben@gmail.com',
-        favoriteMovieQuote: "I drink your milkshake!",
+        favoriteMovieQuote: "I'm sorry Dave, I'm afraid I can't do that",
         photoUrl: 'https://scontent.fmkc1-1.fna.fbcdn.net/v/t31.0-8/10887387_10152426898511222_3263127469470870396_o.jpg?_nc_cat=0&oh=64badc3e717a107c71ce9936337b65e5&oe=5BC3E8B1',
         catalogs: [faveMovies, moviesToSee],
     });
