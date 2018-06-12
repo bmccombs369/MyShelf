@@ -11,8 +11,21 @@ router.get('/new', (req, res) => {
       const catalog = user.catalogs.id(catalogsId);
       res.render('movies/new', {
         user: user,
-        movies: movies
+        catalog: catalog
       });
+    });
+});
+router.post('/', (req, res) => {
+  const usersId = req.params.usersId;
+  const catalogsId = req.params.catalogsId;
+  const newMovie = req.body;
+  User.findById(usersId)
+    .then((user) => {
+      const catalog = user.catalogs.id(catalogsId);
+      return user.save();
+    })
+    .then(() => {
+      response.redirect(`/users/${usersId}}/catalogs/${catalogsId}`)
     });
 });
 
