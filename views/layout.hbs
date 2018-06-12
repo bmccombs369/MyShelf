@@ -9,26 +9,14 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <div class="col s12">
-        <a href="/users" class="breadcrumb">Users</a>
-        <a href="/users/:usersId/catalogs" class="breadcrumb">Catalogs</a>
-        <a href="#!" class="breadcrumb">Movies</a>
+  <header class="col s12">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/users" class="brand-logo">
+          <img class="logo" src="../public/images/shelf.jpng">MyShelf</a>
       </div>
-    </div>
-  </nav>
-  {{!--
-  <div class="row">
-    <header class="col s12">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="/users" class="brand-logo">
-            <img class="logo" src="../public/images/shelf.jpng">MyShelf</a>
-        </div>
-      </nav>
-    </header>
-  </div> --}}
+    </nav>
+  </header>
   <main class="container">
     {{{body}}}
   </main>
