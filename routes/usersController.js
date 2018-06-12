@@ -36,9 +36,9 @@ router.get('/:usersId', (req, res) => {
 
 router.get('/:usersId/edit', (req, res) => {
   User.findById(req.params.usersId)
-    .then((users) => {
+    .then((user) => {
       res.render('users/edit', {
-        users: users
+        user: user
       });
     });
 });
