@@ -4,6 +4,11 @@
     <img src={{this.coverImgUrl}} class="moviePoster">
   </div>
   {{/each}}
+  <div class="addCatalog">
+    <a href="/users/{{user._id}}/catalogs/{{catalogs._id}}/movies/new" class="btn-floating btn-large waves-effect waves-light red">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
 </div>
 <form action="/users/{{user._id}}/catalogs/{{catalog._id}}?_method=DELETE" method="POST" />
 <button class="btn" type="submit">
