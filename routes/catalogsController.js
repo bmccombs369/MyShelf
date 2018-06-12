@@ -20,7 +20,7 @@ router.get('/new', (req, res) => {
 })
 router.post('/', (req, res) => {
     const newCatalog = new Catalog(req.body);
-    User.findById(req.params.userId)
+    User.findById(req.params.usersId)
         .then((user) => {
             user.catalogs.push(newCatalog);
             return user.save()
