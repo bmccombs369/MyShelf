@@ -22,10 +22,11 @@ router.post('/', (req, res) => {
   User.findById(usersId)
     .then((user) => {
       const catalog = user.catalogs.id(catalogsId);
+      catalog.movies.push(newMovie);
       return user.save();
     })
     .then(() => {
-      response.redirect(`/users/${usersId}}/catalogs/${catalogsId}`)
+      response.redirect(`/users/${usersId}}/catalogs/${catalogsId}`);
     });
 });
 
