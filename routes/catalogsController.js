@@ -56,10 +56,12 @@ router.get('/:catalogsId', (req, res) => {
 });
 
 router.delete('/:catalogsId', (req, res) => {
-    Catalog.findByIdAndRemove(req.params.catalogsId)
+    const catalogsId = req.params.catalogsId
+    const usersId = req.params.usersId
+    Catalog.findByIdAndRemove(catalogsId)
         .then(() => {
             console.log('Successfully Deleted');
-            res.redirect(`/users/${req.params.usersId}/catalogs`);
+            res.redirect(`/users/${usersId}/catalogs`);
         });
 })
 
