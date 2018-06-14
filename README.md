@@ -6,6 +6,6 @@
 ### Technologies Used:
 ##### Javascript, Css, HTML, Node.js, Express, Handlebars, MongoDb & Mongoose
 ---
-### This is an app for cataloging movies, books, coins or anything you collect. This version of the app only catalogs movies. For the next version I want to make the app resposive for mobile use. For future versions I would like to allow the user to create their own model within a catalog so that things other than movies could be stored in it.
+### This is an app for cataloging movies, books, coins or anything you collect. This version of the app only catalogs movies. For the next version I want to spend more time styling the app as well as making it more resposive for mobile users. For future versions I would like to allow the user to create their own model within a catalog so that things other than movies could be stored in it.
 
-### As of right now you can create, read, update and destroy users. With the catalogs you can create, read and destroy. I am currently working on allowing the user to create new movies, but the submission form is not currently working. The goal is to have full CRUD for all three models.
+### As of right now you can create, read, update and destroy users. With the catalogs you can create, read and destroy. For the movies you can add a new one, but the redirect is not working properly after submitting. The goal is to have full CRUD for all three models.
