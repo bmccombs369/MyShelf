@@ -62,6 +62,9 @@ router.delete('/:catalogsId', (req, res) => {
         .then(() => {
             console.log('Successfully Deleted');
             res.redirect(`/users/${usersId}/catalogs`);
+        })
+        .catch((err) => {
+            console.log(err);
         });
 })
 
