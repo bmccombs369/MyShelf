@@ -7,12 +7,12 @@
 </div>
 
 <div>
-  <a href="/users/{{usersId}}/catalogs/{{catalogsId}}/new" class="btn-floating btn-large waves-effect waves-light red">
+  <a href="/users/{{usersId}}/catalogs/{{catalog._id}}/new" class="btn-floating btn-large waves-effect waves-light red">
     <i class="material-icons">add</i>
   </a>
 </div>
 
-<form action="/users/{{usersId}}/catalogs/{{catalog._id}}?_method=DELETE" method="POST" />
+<form action="/users/{{usersId}}/catalogs/{{catalog._id}}?_method=DELETE" method="POST">
 <button class="btn" type="submit">
   <i class="material-icons left">delete_forever</i>Delete This Catalog</button>
 </form>
