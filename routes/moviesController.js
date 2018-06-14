@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
       return user.save();
     })
     .then(() => {
-      response.redirect(`/users/${usersId}}/catalogs/${catalogsId}`);
+      res.redirect(`/users/${usersId}}/catalogs/${catalogsId}`);
     });
 });
 
