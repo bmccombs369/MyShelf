@@ -55,7 +55,7 @@ router.get('/:catalogsId', (req, res) => {
         });
 });
 
-router.delete('/:catalogsId', (req, res) => {
+router.delete('/:catalogsId/delete', (req, res) => {
     const catalogsId = req.params.catalogsId
     const usersId = req.params.usersId
     Catalog.findByIdAndRemove(catalogsId)
